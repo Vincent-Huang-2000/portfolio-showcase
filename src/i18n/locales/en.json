@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "home": {
+    "welcome": "Welcome to My Portfolio",
+    "subtitle": "Full-Stack Developer | Focus on User Experience & Technical Implementation",
+    "description": "Passionate about creating innovative solutions and bringing ideas to life through code."
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating user-friendly applications that solve real-world problems.",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "timeline": {
+      "title": "Tech Stack Timeline",
+      "description": "Explore my technical learning journey and skill development trajectory",
+      "technologiesMastered": "Technologies Mastered",
+      "milestone": "Important Milestone",
+      "autoplay": "Autoplay",
+      "pause": "Pause",
+      "play": "Play",
+      "pauseAutoplay": "Pause autoplay",
+      "startAutoplay": "Start autoplay",
+      "keyboardHint": "Use ←→ keys to navigate, Space to play/pause",
+      "previousTimeline": "Previous timeline",
+      "nextTimeline": "Next timeline"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Here are some of the projects I've worked on recently",
+    "searchPlaceholder": "Search projects...",
+    "viewProject": "View Project",
+    "viewGitHub": "View on GitHub",
+    "technologies": "Technologies Used",
+    "noProjects": "No projects found matching your search.",
+    "detail": {
+      "title": "Project Details",
+      "overview": "Overview",
+      "features": "Key Features",
+      "technologies": "Technologies",
+      "liveDemo": "Live Demo",
+      "sourceCode": "Source Code",
+      "backToProjects": "Back to Projects",
+      "projectNotFound": "Project not found",
+      "projectNotFoundDescription": "The project you're looking for doesn't exist or has been removed.",
+      "projectGallery": "Project Gallery",
+      "projectLinks": "Project Links",
+      "viewDetails": "View Details"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "I'd love to hear from you! Feel free to reach out for collaborations or just to say hi.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "name": "Name",
+    "message": "Message",
+    "send": "Send Message",
+    "messagePlaceholder": "Your message here...",
+    "about": {
+      "title": "About Me",
+      "description": "I'm a passionate full-stack developer focused on modern web technologies and user experience. I love creating innovative solutions and bringing ideas to life through code. With years of development experience, I excel in both frontend and backend technologies, capable of handling projects from design to deployment independently.",
+      "coffeeLovers": "Coffee Lover",
+      "rating": "5 Star Rating"
+    },
+    "services": {
+      "webDevelopment": "Web Development",
+      "mobileApp": "Mobile Apps",
+      "consulting": "Consulting",
+      "maintenance": "Maintenance"
+    },
+    "skills": {
+      "title": "Skills Overview"
+    },
+    "workingHours": {
+      "title": "Working Hours",
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "weekend": "Weekend",
+      "flexible": "Flexible"
+    },
+    "info": {
+      "title": "Contact Information"
+    },
+    "social": {
+      "title": "Follow Me"
+    },
+    "response": {
+      "title": "Quick Response",
+      "description": "I typically respond to messages within 24 hours."
+    },
+    "availability": {
+      "title": "Current Status",
+      "description": "Currently available for new projects and collaborations!"
+    }
+  },
+  "common": {
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "language": "Language",
+    "downloadResume": "Download Resume",
+    "loading": "Loading...",
+    "error": "Something went wrong"
+  }
+} 

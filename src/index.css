@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Custom styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased font-sans;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+  }
+
+  /* 优化标题间距 */
+  h1, h2, h3, h4, h5, h6 {
+    @apply leading-tight;
+    margin-bottom: 0.75em;
+    margin-top: 0.5em;
+  }
+
+  /* 优化段落间距 */
+  p {
+    @apply leading-relaxed;
+    margin-bottom: 1.25em;
+  }
+
+  /* 优化列表间距 */
+  ul, ol {
+    @apply leading-relaxed;
+    margin-bottom: 1.25em;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
+@layer components {
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.6;
+  }
+
+  /* 优化卡片内容间距 */
+  .card-content {
+    @apply leading-relaxed;
+  }
+
+  .card-content > * + * {
+    margin-top: 1rem;
+  }
+
+  /* 优化表单元素间距 */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    @apply block font-medium mb-2 leading-normal;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    @apply leading-normal;
+  }
+
+  /* 优化按钮间距 */
+  .btn-group {
+    @apply flex flex-wrap gap-3;
+  }
+
+  .btn-group > * {
+    @apply min-w-0;
+  }
+
+  /* 优化导航间距 */
+  .nav-items {
+    @apply space-x-6;
+  }
+
+  /* 优化技能条间距 */
+  .skill-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .skill-item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* 优化项目卡片间距 */
+  .project-card {
+    @apply space-y-4;
+  }
+
+  .project-card .tech-tags {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .project-card .tech-tags > * {
+    @apply whitespace-nowrap;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 自定义间距工具类 */
+  .space-y-tight > * + * {
+    margin-top: 0.75rem;
+  }
+
+  .space-y-comfortable > * + * {
+    margin-top: 1.5rem;
+  }
+
+  .space-y-loose > * + * {
+    margin-top: 2rem;
+  }
+
+  /* 文本可读性工具类 */
+  .text-readable {
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+  }
+
+  .text-compact {
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Dark mode transitions */
+* {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Focus styles */
+.focus\:ring-2:focus {
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Custom backdrop blur for better browser support */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* 响应式字体优化 */
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    margin-bottom: 0.875rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 641px) {
+  body {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+}

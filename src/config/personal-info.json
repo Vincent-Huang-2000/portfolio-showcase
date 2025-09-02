@@ -1,0 +1,124 @@
+{
+  "personal": {
+    "name": "Portfolio Developer",
+    "title": {
+      "en": "Full Stack Developer",
+      "zh": "全栈开发者"
+    },
+    "avatar": {
+      "letter": "P",
+      "color": "bg-blue-500"
+    },
+    "contact": {
+      "email": "john.doe@example.com",
+      "phone": "+1 (555) 123-4567",
+      "location": "San Francisco, CA",
+      "experience": "3+ Years"
+    },
+    "description": {
+      "en": "I am a passionate Full Stack Developer with expertise in creating modern web applications. I love turning ideas into reality through clean, efficient code.",
+      "zh": "我是一名充满热情的全栈开发者，专注于现代Web技术和用户体验。我热爱创造创新的解决方案，通过代码将想法变为现实。"
+    }
+  },
+  "social": {
+    "github": {
+      "url": "https://github.com/yourusername",
+      "username": "yourusername"
+    },
+    "linkedin": {
+      "url": "https://linkedin.com/in/yourusername",
+      "username": "yourusername"
+    },
+    "twitter": {
+      "url": "https://twitter.com/yourusername",
+      "username": "yourusername"
+    }
+  },
+  "experience": [
+    {
+      "title": {
+        "en": "Senior Frontend Developer",
+        "zh": "高级前端开发工程师"
+      },
+      "company": {
+        "en": "Tech Company",
+        "zh": "科技公司"
+      },
+      "period": {
+        "en": "2022 - Present",
+        "zh": "2022 - 至今"
+      },
+      "description": {
+        "en": "Leading frontend development projects using React, TypeScript, and modern web technologies.",
+        "zh": "使用React、TypeScript和现代Web技术领导前端开发项目。"
+      }
+    },
+    {
+      "title": {
+        "en": "Full-Stack Developer",
+        "zh": "全栈开发工程师"
+      },
+      "company": {
+        "en": "Startup Inc.",
+        "zh": "创业公司"
+      },
+      "period": {
+        "en": "2020 - 2022",
+        "zh": "2020 - 2022"
+      },
+      "description": {
+        "en": "Developed and maintained full-stack applications using Node.js, React, and PostgreSQL.",
+        "zh": "使用Node.js、React和PostgreSQL开发和维护全栈应用程序。"
+      }
+    }
+  ],
+  "education": [
+    {
+      "degree": {
+        "en": "Bachelor of Computer Science",
+        "zh": "计算机科学学士"
+      },
+      "school": {
+        "en": "University Name",
+        "zh": "大学名称"
+      },
+      "period": {
+        "en": "2016 - 2020",
+        "zh": "2016 - 2020"
+      },
+      "description": {
+        "en": "Focused on software engineering, algorithms, and web development.",
+        "zh": "专注于软件工程、算法和Web开发。"
+      }
+    }
+  ],
+  "resume": {
+    "filename": "Portfolio_Resume.pdf",
+    "path": "/resume.pdf",
+    "size": "2.1 MB",
+    "pages": 2,
+    "lastUpdated": "Jan 2024"
+  },
+  "workingHours": {
+    "monday": "9:00 AM - 6:00 PM",
+    "tuesday": "9:00 AM - 6:00 PM",
+    "wednesday": "9:00 AM - 6:00 PM",
+    "thursday": "9:00 AM - 6:00 PM",
+    "friday": "9:00 AM - 6:00 PM",
+    "weekend": "flexible"
+  },
+  "availability": {
+    "status": "available",
+    "message": {
+      "en": "Currently available for new projects",
+      "zh": "目前可接受新项目合作"
+    }
+  },
+  "response": {
+    "time": "24 hours",
+    "message": {
+      "en": "I usually respond within 24 hours",
+      "zh": "我通常会在24小时内回复"
+    }
+  }
+} 
