@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { skillsData, skillLevels } from '../data/projects';
+import { skillsData, skillLevels } from '../data/skills';
 import { Card, CardContent, CardHeader, CardTitle, Button } from '../components/ui';
 import TechTimeline from '../components/TechTimeline';
 import { usePersonalInfo } from '../hooks/usePersonalInfo';

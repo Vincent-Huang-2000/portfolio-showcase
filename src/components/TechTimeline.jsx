@@ -1,7 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { techTimelineData, techCategoryColors, skillLevels } from '../data/projects';
+import { techTimelineData, techCategoryColors } from '../data/timeline';
+import { skillLevels } from '../data/skills';
 import { Card, CardContent, CardHeader, CardTitle } from './ui';
 import { 
   Clock, ChevronLeft, ChevronRight, Star, Play, Pause, Keyboard,
