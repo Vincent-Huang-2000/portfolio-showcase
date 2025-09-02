@@ -250,10 +250,7 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 欢迎提交 Issues 和 Pull Requests！
 
 ## 📞 联系方式
-
-- GitHub: [yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-- LinkedIn: [yourprofile](https://linkedin.com/in/yourprofile)
+- GitHub: [Vincent-Huang-2000](https://github.com/Vincent-Huang-2000)
 
 ---
 
