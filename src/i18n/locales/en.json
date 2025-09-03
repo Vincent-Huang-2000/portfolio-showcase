@@ -9,7 +9,25 @@
   "home": {
     "welcome": "Welcome to My Portfolio",
     "subtitle": "Full-Stack Developer | Focus on User Experience & Technical Implementation",
-    "description": "Passionate about creating innovative solutions and bringing ideas to life through code."
+    "description": "Passionate about creating innovative solutions and bringing ideas to life through code.",
+    "introduction": "I am a passionate Full Stack Developer with expertise in creating modern web applications. I love turning ideas into reality through clean, efficient code.",
+    "skills": {
+      "fullstack": "Full Stack Development",
+      "fullstack.desc": "End-to-end web development with modern technologies",
+      "design": "UI/UX Design",
+      "design.desc": "Creating beautiful and intuitive user experiences",
+      "performance": "Performance Optimization",
+      "performance.desc": "Building fast and efficient web applications"
+    },
+    "cta": {
+      "title": "Let's Work Together",
+      "subtitle": "Ready to bring your ideas to life? Let's discuss your next project.",
+      "contact": "Get in Touch",
+      "projects": "View My Work"
+    },
+    "whatIDo": "What I Do",
+    "whatIDoDesc": "I specialize in creating comprehensive digital solutions that combine functionality with exceptional user experience.",
+    "downloadResume": "Download Resume"
   },
   "about": {
     "title": "About Me",
