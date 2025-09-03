@@ -30,6 +30,14 @@ const About = () => {
   const { t, i18n } = useTranslation();
   const { personalInfo, getLocalizedText } = usePersonalInfo();
 
+  const handleDownload = () => {
+    // 创建下载链接
+    const link = document.createElement('a');
+    link.href = personalInfo.resume.path;
+    link.download = personalInfo.resume.filename;
+    link.click();
+  };
+
   // 从配置文件获取个人信息
   const personalInfoItems = [
     {
@@ -192,6 +200,7 @@ const About = () => {
                   size="lg"
                   leftIcon={<Download size={20} />}
                   className="w-full"
+                  onClick={handleDownload}
                 >
                   {t('common.downloadResume')}
                 </Button>
