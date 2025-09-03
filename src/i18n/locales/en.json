@@ -55,6 +55,41 @@
       "viewDetails": "View Details"
     }
   },
+  "resume": {
+    "subtitle": "Download my resume or view it online",
+    "previewOnline": "Preview Online",
+    "whatsIncluded": {
+      "title": "What's Included",
+      "items": {
+        "experience": "Professional Experience",
+        "skills": "Technical Skills",
+        "education": "Education & Certifications",
+        "projects": "Notable Projects",
+        "contact": "Contact Information"
+      }
+    },
+    "fileDetails": {
+      "title": "File Details",
+      "format": "Format",
+      "size": "Size",
+      "pages": "Pages",
+      "updated": "Updated"
+    },
+    "experienceHighlights": {
+      "title": "Experience Highlights"
+    },
+    "technicalSkills": {
+      "title": "Technical Skills",
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "more": {
+      "title": "Want to Know More?",
+      "description": "Feel free to reach out if you have any questions about my experience or would like to discuss opportunities.",
+      "getInTouch": "Get In Touch",
+      "emailDirectly": "Email Directly"
+    }
+  },
   "contact": {
     "title": "Get In Touch",
     "subtitle": "I'd love to hear from you! Feel free to reach out for collaborations or just to say hi.",
