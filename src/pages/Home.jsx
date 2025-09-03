@@ -33,7 +33,10 @@ const Home = () => {
         'home.cta.title': 'Let\'s Work Together',
         'home.cta.subtitle': 'Ready to bring your ideas to life? Let\'s discuss your next project.',
         'home.cta.contact': 'Get in Touch',
-        'home.cta.projects': 'View My Work'
+        'home.cta.projects': 'View My Work',
+        'home.whatIDo': 'What I Do',
+        'home.whatIDoDesc': 'I specialize in creating comprehensive digital solutions that combine functionality with exceptional user experience.',
+        'home.downloadResume': 'Download Resume'
       };
       return defaultTexts[key] || key;
     }
@@ -150,34 +153,34 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              What I Do
+              {getLocalizedText('home.whatIDo')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              I specialize in creating comprehensive digital solutions that combine functionality with exceptional user experience.
+              {getLocalizedText('home.whatIDoDesc')}
             </p>
           </motion.div>
 
-          {/* 技能展示部分 */}
+          {/* Skills Display Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {skills.map((skill, index) => {
-              const Icon = skill.icon; // 获取技能图标
+              const Icon = skill.icon; // Get skill icon
               return (
                 <motion.div
-                  key={index} // 使用索引作为唯一键
-                  initial={{ opacity: 0, y: 20 }} // 初始状态：透明度为0，向下偏移20
-                  animate={{ opacity: 1, y: 0 }} // 动画状态：透明度为1，回到原位
-                  transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }} // 动画持续时间和延迟
+                  key={index} // Use index as unique key
+                  initial={{ opacity: 0, y: 20 }} // Initial state: opacity 0, offset 20px down
+                  animate={{ opacity: 1, y: 0 }} // Animation state: opacity 1, back to original position
+                  transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }} // Animation duration and delay
                 >
-                  <Card variant="gradient" shadow="lg" hover="lift"> {/* 渲染卡片 */}
-                    <CardContent className="text-center p-8"> {/* 卡片内容 */}
+                  <Card variant="gradient" shadow="lg" hover="lift"> {/* Render card */}
+                    <CardContent className="text-center p-8"> {/* Card content */}
                       <div className={`w-16 h-16 rounded-full ${skill.color} flex items-center justify-center mx-auto mb-6`}>
-                        <Icon size={32} className="text-white" /> {/* 显示技能图标 */}
+                        <Icon size={32} className="text-white" /> {/* Display skill icon */}
                       </div>
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                        {skill.title} {/* 显示技能标题 */}
+                        {skill.title} {/* Display skill title */}
                       </h3>
                       <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        {skill.description} {/* 显示技能描述 */}
+                        {skill.description} {/* Display skill description */}
                       </p>
                     </CardContent>
                   </Card>
@@ -221,9 +224,9 @@ const Home = () => {
                       size="lg"
                       rightIcon={<Download size={20} />}
                       className="w-full sm:w-auto"
-                    >
-                      Download Resume
-                    </Button>
+                                          >
+                        {getLocalizedText('home.downloadResume')}
+                      </Button>
                   </Link>
                 </div>
               </CardContent>

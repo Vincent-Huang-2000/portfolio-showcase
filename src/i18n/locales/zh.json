@@ -9,7 +9,25 @@
   "home": {
     "welcome": "欢迎来到我的作品集",
     "subtitle": "全栈开发者 | 专注用户体验与技术实现",
-    "description": "热衷于创造创新解决方案，通过代码将想法变为现实。"
+    "description": "热衷于创造创新解决方案，通过代码将想法变为现实。",
+    "introduction": "我是一名充满热情的全栈开发者，擅长创建现代Web应用程序。我喜欢通过干净、高效的代码将想法变为现实。",
+    "skills": {
+      "fullstack": "全栈开发",
+      "fullstack.desc": "使用现代技术进行端到端Web开发",
+      "design": "UI/UX设计",
+      "design.desc": "创建美观直观的用户体验",
+      "performance": "性能优化",
+      "performance.desc": "构建快速高效的Web应用程序"
+    },
+    "cta": {
+      "title": "让我们一起合作",
+      "subtitle": "准备将您的想法变为现实？让我们讨论您的下一个项目。",
+      "contact": "联系我",
+      "projects": "查看我的作品"
+    },
+    "whatIDo": "我的专长",
+    "whatIDoDesc": "我专注于创建全面的数字解决方案，将功能性与卓越的用户体验相结合。",
+    "downloadResume": "下载简历"
   },
   "about": {
     "title": "关于我",
@@ -40,6 +58,22 @@
     "viewGitHub": "查看 GitHub",
     "technologies": "使用技术",
     "noProjects": "没有找到匹配的项目。",
+    "filter": "筛选",
+    "filterByCategory": "按类别筛选",
+    "clearFilters": "清除筛选",
+    "noProjectsDescription": "尝试调整您的搜索或筛选条件以找到您要找的内容",
+    "categories": {
+      "all": "全部",
+      "frontend": "前端",
+      "fullstack": "全栈",
+      "dataScience": "数据科学"
+    },
+    "statistics": {
+      "totalProjects": "项目总数",
+      "frontend": "前端项目",
+      "fullstack": "全栈项目",
+      "dataScience": "数据科学项目"
+    },
     "detail": {
       "title": "项目详情",
       "overview": "项目概述",
@@ -52,7 +86,13 @@
       "projectNotFoundDescription": "您寻找的项目不存在或已被移除。",
       "projectGallery": "项目图片",
       "projectLinks": "项目链接",
-      "viewDetails": "查看详情"
+      "viewDetails": "查看详情",
+      "projectInfo": "项目信息",
+      "category": "类别",
+      "techStack": "技术栈",
+      "projectId": "项目ID",
+      "technology": "项技术",
+      "technologiesCount": "项技术"
     }
   },
   "resume": {
