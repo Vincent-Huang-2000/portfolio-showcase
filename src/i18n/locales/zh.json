@@ -55,6 +55,41 @@
       "viewDetails": "查看详情"
     }
   },
+  "resume": {
+    "subtitle": "下载我的简历或在线查看",
+    "previewOnline": "在线预览",
+    "whatsIncluded": {
+      "title": "包含内容",
+      "items": {
+        "experience": "工作经历",
+        "skills": "技术技能",
+        "education": "教育与证书",
+        "projects": "代表项目",
+        "contact": "联系信息"
+      }
+    },
+    "fileDetails": {
+      "title": "文件信息",
+      "format": "格式",
+      "size": "大小",
+      "pages": "页数",
+      "updated": "更新日期"
+    },
+    "experienceHighlights": {
+      "title": "经验亮点"
+    },
+    "technicalSkills": {
+      "title": "技术技能",
+      "frontend": "前端",
+      "backend": "后端"
+    },
+    "more": {
+      "title": "想了解更多？",
+      "description": "如对我的经历有疑问或希望交流合作，欢迎随时联系我。",
+      "getInTouch": "联系我",
+      "emailDirectly": "直接邮件"
+    }
+  },
   "contact": {
     "title": "联系我",
     "subtitle": "很高兴听到您的声音！欢迎联系我进行合作或者只是打个招呼。",
