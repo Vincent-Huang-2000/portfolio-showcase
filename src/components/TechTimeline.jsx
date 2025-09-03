@@ -108,7 +108,7 @@ const TechTimeline = ({
 
   return (
     <div className={className}>
-      <Card variant="default" shadow="lg">
+      <Card variant="glass" shadow="lg">
         {showHeader && (
           <CardHeader>
             <div className="flex items-center justify-between">

@@ -135,7 +135,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <Card variant="default" shadow="lg">
+            <Card variant="fresh" shadow="lg" >
               <CardContent className="p-8 text-center">
                 <div className={`w-32 h-32 md:w-36 md:h-36 mx-auto mb-6 rounded-full ${personalInfo.avatar.color} p-1`}>
                   <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 flex items-center justify-center">
@@ -206,7 +206,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <Card variant="default" shadow="lg">
+            <Card variant="fresh" shadow="lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Award size={24} />
@@ -297,7 +297,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Card variant="default" shadow="lg">
+            <Card variant="glass" shadow="lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Briefcase size={24} />
@@ -333,7 +333,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Card variant="default" shadow="lg">
+            <Card variant="fresh" shadow="lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <BookOpen size={24} />
