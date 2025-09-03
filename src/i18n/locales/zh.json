@@ -77,6 +77,7 @@
     "detail": {
       "title": "项目详情",
       "overview": "项目概述",
+      "projectDetails": "项目详情",
       "features": "主要特性",
       "technologies": "技术栈",
       "liveDemo": "在线演示",
