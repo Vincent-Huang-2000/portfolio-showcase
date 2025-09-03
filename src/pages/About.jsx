@@ -11,8 +11,8 @@ import { Download, Award, BookOpen, Briefcase, MapPin, Mail, Calendar, Star, Git
  * About 页面组件
  * 
  * 技能系统说明：
- * 1. 技能数据定义在 src/data/projects.js 的 skillsData 数组中
- * 2. 星级配置定义在 src/data/projects.js 的 skillLevels 对象中
+ * 1. 技能数据定义在 src/data/skills.js 的 skillsData 数组中
+ * 2. 星级配置定义在 src/data/skills.js 的 skillLevels 对象中
  * 3. 支持四个等级：beginner(2星), intermediate(3星), advanced(4星), expert(5星)
  * 4. 每个等级包含：星级数量、显示文本、颜色、详细描述
  * 5. 鼠标悬停星级可查看详细描述
@@ -20,7 +20,7 @@ import { Download, Award, BookOpen, Briefcase, MapPin, Mail, Calendar, Star, Git
  * 7. 颜色系统已简化：1-3星显示蓝色，4-5星显示橙色
  * 
  * 如需修改技能信息：
- * - 编辑 src/data/projects.js 中的 skillsData 数组
+ * - 编辑 src/data/skills.js 中的 skillsData 数组
  * - 修改 skillLevels 对象可调整等级配置
  * - 调整 getSimplifiedColor 函数可修改颜色方案
  * - 所有配置都有详细的中文注释说明
@@ -29,6 +29,14 @@ import { Download, Award, BookOpen, Briefcase, MapPin, Mail, Calendar, Star, Git
 const About = () => {
   const { t, i18n } = useTranslation();
   const { personalInfo, getLocalizedText } = usePersonalInfo();
+
+  const handleDownload = () => {
+    // 创建下载链接
+    const link = document.createElement('a');
+    link.href = personalInfo.resume.path;
+    link.download = personalInfo.resume.filename;
+    link.click();
+  };
 
   // 从配置文件获取个人信息
   const personalInfoItems = [
@@ -135,7 +143,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <Card variant="default" shadow="lg">
+            <Card variant="fresh" shadow="lg" >
               <CardContent className="p-8 text-center">
                 <div className={`w-32 h-32 md:w-36 md:h-36 mx-auto mb-6 rounded-full ${personalInfo.avatar.color} p-1`}>
                   <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 flex items-center justify-center">
@@ -192,6 +200,7 @@ const About = () => {
                   size="lg"
                   leftIcon={<Download size={20} />}
                   className="w-full"
+                  onClick={handleDownload}
                 >
                   {t('common.downloadResume')}
                 </Button>
@@ -206,7 +215,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <Card variant="default" shadow="lg">
+            <Card variant="fresh" shadow="lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Award size={24} />
@@ -297,7 +306,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Card variant="default" shadow="lg">
+            <Card variant="glass" shadow="lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Briefcase size={24} />
@@ -333,7 +342,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Card variant="default" shadow="lg">
+            <Card variant="fresh" shadow="lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <BookOpen size={24} />
