@@ -11,8 +11,8 @@ import { Download, Award, BookOpen, Briefcase, MapPin, Mail, Calendar, Star, Git
  * About 页面组件
  * 
  * 技能系统说明：
- * 1. 技能数据定义在 src/data/projects.js 的 skillsData 数组中
- * 2. 星级配置定义在 src/data/projects.js 的 skillLevels 对象中
+ * 1. 技能数据定义在 src/data/skills.js 的 skillsData 数组中
+ * 2. 星级配置定义在 src/data/skills.js 的 skillLevels 对象中
  * 3. 支持四个等级：beginner(2星), intermediate(3星), advanced(4星), expert(5星)
  * 4. 每个等级包含：星级数量、显示文本、颜色、详细描述
  * 5. 鼠标悬停星级可查看详细描述
@@ -20,7 +20,7 @@ import { Download, Award, BookOpen, Briefcase, MapPin, Mail, Calendar, Star, Git
  * 7. 颜色系统已简化：1-3星显示蓝色，4-5星显示橙色
  * 
  * 如需修改技能信息：
- * - 编辑 src/data/projects.js 中的 skillsData 数组
+ * - 编辑 src/data/skills.js 中的 skillsData 数组
  * - 修改 skillLevels 对象可调整等级配置
  * - 调整 getSimplifiedColor 函数可修改颜色方案
  * - 所有配置都有详细的中文注释说明
