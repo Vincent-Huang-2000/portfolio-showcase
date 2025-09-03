@@ -86,7 +86,13 @@
       "projectNotFoundDescription": "The project you're looking for doesn't exist or has been removed.",
       "projectGallery": "Project Gallery",
       "projectLinks": "Project Links",
-      "viewDetails": "View Details"
+      "viewDetails": "View Details",
+      "projectInfo": "Project Info",
+      "category": "Category",
+      "techStack": "Tech Stack",
+      "projectId": "Project ID",
+      "technology": "Technology",
+      "technologiesCount": "Technologies"
     }
   },
   "resume": {

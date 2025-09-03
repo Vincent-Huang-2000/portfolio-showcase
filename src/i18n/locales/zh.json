@@ -86,7 +86,13 @@
       "projectNotFoundDescription": "您寻找的项目不存在或已被移除。",
       "projectGallery": "项目图片",
       "projectLinks": "项目链接",
-      "viewDetails": "查看详情"
+      "viewDetails": "查看详情",
+      "projectInfo": "项目信息",
+      "category": "类别",
+      "techStack": "技术栈",
+      "projectId": "项目ID",
+      "technology": "项技术",
+      "technologiesCount": "项技术"
     }
   },
   "resume": {

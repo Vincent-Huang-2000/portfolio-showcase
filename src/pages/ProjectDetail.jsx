@@ -18,6 +18,10 @@ const ProjectDetail = () => {
     return textObj[i18n.language] || textObj.en;
   };
 
+  const getLocalizedCategory = (category) => {
+    return t(`projects.categories.${category}`);
+  };
+
   const handleImageError = () => {
     setImageError(true);
   };
@@ -103,7 +107,7 @@ const ProjectDetail = () => {
               </h1>
               <div className="flex items-center gap-4 mb-4">
                 <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full font-semibold">
-                  {project.category}
+                  {getLocalizedCategory(project.category)}
                 </span>
                 <span className="text-gray-500 dark:text-gray-400">
                   ID: {project.id}
@@ -261,23 +265,23 @@ const ProjectDetail = () => {
                 <CardContent className="p-6">
                   <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                     <Tag size={20} className="text-orange-600 dark:text-orange-400" />
-                    Project Info
+                    {t('projects.detail.projectInfo')}
                   </h3>
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-600 dark:text-gray-400">Category</span>
+                      <span className="text-gray-600 dark:text-gray-400">{t('projects.detail.category')}</span>
                       <span className="font-medium text-gray-900 dark:text-white">
-                        {project.category}
+                        {getLocalizedCategory(project.category)}
                       </span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-600 dark:text-gray-400">Tech Stack</span>
+                      <span className="text-gray-600 dark:text-gray-400">{t('projects.detail.techStack')}</span>
                       <span className="font-medium text-gray-900 dark:text-white">
-                        {project.technologies.length} {project.technologies.length === 1 ? 'Technology' : 'Technologies'}
+                        {project.technologies.length} {project.technologies.length === 1 ? t('projects.detail.technology') : t('projects.detail.technologiesCount')}
                       </span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-600 dark:text-gray-400">Project ID</span>
+                      <span className="text-gray-600 dark:text-gray-400">{t('projects.detail.projectId')}</span>
                       <span className="font-medium text-gray-900 dark:text-white">
                         #{project.id}
                       </span>
