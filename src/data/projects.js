@@ -42,18 +42,17 @@ export const projects = [
   {
     id: 1,
     title: {
-      en: "E-commerce Platform",
-      zh: "电商平台"
+      en: "Portfolio Website",
+      zh: "个人作品集网站"
     },
     description: {
-      en: "A full-stack e-commerce platform built with React and Node.js, featuring user authentication, product management, shopping cart, and payment integration.",
-      zh: "基于React和Node.js构建的全栈电商平台，具有用户认证、产品管理、购物车和支付集成功能。"
+      en: "A modern personal portfolio showcase website built with React and Tailwind CSS.",
+      zh: "一个基于 React 和 Tailwind CSS 构建的现代化个人作品集展示网站。"
     },
-    image: createProjectPlaceholder("E-commerce", "#3B82F6"),
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-    // githubUrl: "https://github.com/example/ecommerce-platform",
-    // liveUrl: "https://ecommerce-demo.com",
-    category: "fullstack"
+    image: createProjectPlaceholder("Portfolio", "#06B6D4"),
+    technologies: ["React", "Framer Motion", "Tailwind CSS", "Vite"],
+    githubUrl: "https://github.com/Vincent-Huang-2000/portfolio-showcase",
+    category: "frontend"
   },
   {
     id: 2,
@@ -122,18 +121,18 @@ export const projects = [
   {
     id: 6,
     title: {
-      en: "Portfolio Website",
-      zh: "个人作品集网站"
+      en: "E-commerce Platform",
+      zh: "电商平台"
     },
     description: {
-      en: "A responsive portfolio website showcasing projects and skills with smooth animations and modern design.",
-      zh: "展示项目和技能的响应式作品集网站，具有流畅的动画和现代设计。"
+      en: "A full-stack e-commerce platform built with React and Node.js, featuring user authentication, product management, shopping cart, and payment integration.",
+      zh: "基于React和Node.js构建的全栈电商平台，具有用户认证、产品管理、购物车和支付集成功能。"
     },
-    image: createProjectPlaceholder("Portfolio", "#06B6D4"),
-    technologies: ["React", "Framer Motion", "Tailwind CSS", "Vite"],
-    githubUrl: "https://github.com/example/portfolio",
-    liveUrl: "https://portfolio-demo.com",
-    category: "frontend"
+    image: createProjectPlaceholder("E-commerce", "#3B82F6"),
+    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+    // githubUrl: "https://github.com/example/ecommerce-platform",
+    // liveUrl: "https://ecommerce-demo.com",
+    category: "fullstack"
   },
   {
     id: 7,

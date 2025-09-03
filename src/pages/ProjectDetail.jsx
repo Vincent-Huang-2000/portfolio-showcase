@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ExternalLink, Github, Eye, Code, Globe, Calendar, Tag } from 'lucide-react';
 import { projects } from '../data/projects';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { Card, CardContent, Button } from '../components/ui';
 
 const ProjectDetail = () => {
@@ -11,6 +13,7 @@ const ProjectDetail = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const [imageError, setImageError] = useState(false);
+  const [markdownContent, setMarkdownContent] = useState(null);
 
   const project = projects.find(p => p.id === parseInt(id));
 
@@ -37,6 +40,49 @@ const ProjectDetail = () => {
     `;
     return `data:image/svg+xml;base64,${btoa(svg)}`;
   };
+
+  // 加载可选 Markdown：/public/projects/{id}.{lang}.md -> /public/projects/{id}.en.md -> /public/projects/{id}.md
+  useEffect(() => {
+    if (!project) return;
+
+    const loadMarkdown = async () => {
+      const currentLang = (i18n.language || 'en').split('-')[0];
+      const candidates = [
+        `/projects/${project.id}.${currentLang}.md`,
+        `/projects/${project.id}.en.md`,
+        `/projects/${project.id}.md`
+      ];
+
+      for (const url of candidates) {
+        try {
+          const res = await fetch(url, { cache: 'no-store' });
+          if (res.ok) {
+            const contentType = res.headers.get('content-type') || '';
+            const text = await res.text();
+            
+            // 检查是否为 Markdown 内容：
+            // 1. 内容类型应该是 text/plain 或包含 markdown
+            // 2. 内容不应该包含 HTML 标签（避免服务器返回 HTML 页面）
+            // 3. 内容长度大于 0
+            if (text && 
+                text.trim().length > 0 && 
+                !text.includes('<!doctype html>') && 
+                !text.includes('<html') && 
+                (contentType.includes('text/plain') || contentType.includes('markdown') || contentType === '')) {
+              setMarkdownContent(text);
+              return;
+            }
+          }
+        } catch (_) {
+          // 忽略错误，尝试下一个候选
+        }
+      }
+
+      setMarkdownContent(null);
+    };
+
+    loadMarkdown();
+  }, [project, i18n.language]);
 
   if (!project) {
     return (
@@ -186,11 +232,32 @@ const ProjectDetail = () => {
               </Card>
             </motion.div>
 
+            {/* Project Details (Markdown) - Only show if markdown content exists */}
+            {markdownContent && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.35 }}
+              >
+                <Card variant="glass" shadow="lg">
+                  <CardContent className="p-8">
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+                      <Calendar size={24} className="text-green-600 dark:text-green-400" />
+                      {t('projects.detail.projectDetails')}
+                    </h2>
+                    <div className="prose dark:prose-invert max-w-none prose-img:rounded-lg prose-img:shadow-md prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-600 dark:prose-p:text-gray-300">
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownContent}</ReactMarkdown>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            )}
+
             {/* Technologies */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: markdownContent ? 0.45 : 0.4 }}
             >
               <Card variant="glass" shadow="lg">
                 <CardContent className="p-8">
@@ -219,7 +286,7 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: markdownContent ? 0.55 : 0.5 }}
             >
               <Card variant="gradient" shadow="lg">
                 <CardContent className="p-6">
@@ -259,7 +326,7 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: markdownContent ? 0.65 : 0.6 }}
             >
               <Card variant="outline" shadow="lg">
                 <CardContent className="p-6">
