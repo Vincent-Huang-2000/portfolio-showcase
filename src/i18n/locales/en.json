@@ -58,6 +58,22 @@
     "viewGitHub": "View on GitHub",
     "technologies": "Technologies Used",
     "noProjects": "No projects found matching your search.",
+    "filter": "Filter",
+    "filterByCategory": "Filter by Category",
+    "clearFilters": "Clear Filters",
+    "noProjectsDescription": "Try adjusting your search or filter criteria to find what you're looking for",
+    "categories": {
+      "all": "All",
+      "frontend": "Frontend",
+      "fullstack": "Full-Stack",
+      "dataScience": "Data Science"
+    },
+    "statistics": {
+      "totalProjects": "Total Projects",
+      "frontend": "Frontend",
+      "fullstack": "Full-Stack",
+      "dataScience": "Data Science"
+    },
     "detail": {
       "title": "Project Details",
       "overview": "Overview",

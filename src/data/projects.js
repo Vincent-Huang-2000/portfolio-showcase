@@ -53,7 +53,7 @@ export const projects = [
     technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
     // githubUrl: "https://github.com/example/ecommerce-platform",
     // liveUrl: "https://ecommerce-demo.com",
-    category: "Full-Stack"
+    category: "fullstack"
   },
   {
     id: 2,
@@ -69,7 +69,7 @@ export const projects = [
     technologies: ["React", "Firebase", "Material-UI", "Socket.io"],
     githubUrl: "https://github.com/example/task-manager",
     liveUrl: "https://task-manager-demo.com",
-    category: "Frontend"
+    category: "frontend"
   },
   {
     id: 3,
@@ -85,7 +85,7 @@ export const projects = [
     technologies: ["Vue.js", "OpenWeather API", "Chart.js", "CSS Grid"],
     githubUrl: "https://github.com/example/weather-dashboard",
     liveUrl: "https://weather-dashboard-demo.com",
-    category: "Frontend"
+    category: "frontend"
   },
   {
     id: 4,
@@ -101,7 +101,7 @@ export const projects = [
     technologies: ["React", "Socket.io", "Express.js", "PostgreSQL"],
     githubUrl: "https://github.com/example/chat-app",
     liveUrl: "https://chat-app-demo.com",
-    category: "Full-Stack"
+    category: "fullstack"
   },
   {
     id: 5,
@@ -117,7 +117,7 @@ export const projects = [
     technologies: ["D3.js", "Python", "Flask", "PostgreSQL"],
     githubUrl: "https://github.com/example/data-viz-tool",
     liveUrl: "https://data-viz-demo.com",
-    category: "Data Science"
+    category: "dataScience"
   },
   {
     id: 6,
@@ -133,7 +133,7 @@ export const projects = [
     technologies: ["React", "Framer Motion", "Tailwind CSS", "Vite"],
     githubUrl: "https://github.com/example/portfolio",
     liveUrl: "https://portfolio-demo.com",
-    category: "Frontend"
+    category: "frontend"
   },
   {
     id: 7,
@@ -149,6 +149,6 @@ export const projects = [
     technologies: ["Next.js", "MDX", "Tailwind CSS", "TypeScript"],
     githubUrl: "https://github.com/yourusername/my-blog",
     liveUrl: "https://yourblog.com",
-    category: "Frontend"
+    category: "frontend"
   }
 ];

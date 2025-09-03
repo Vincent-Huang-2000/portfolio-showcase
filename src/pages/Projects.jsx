@@ -9,14 +9,14 @@ import { Search, Filter, X, Code, Globe, Database, BarChart3 } from 'lucide-reac
 const Projects = () => {
   const { t, i18n } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const categories = [
-    { label: 'All', value: 'All' },
-    { label: 'Frontend', value: 'Frontend' },
-    { label: 'Full-Stack', value: 'Full-Stack' },
-    { label: 'Data Science', value: 'Data Science' }
+    { label: t('projects.categories.all'), value: 'all' },
+    { label: t('projects.categories.frontend'), value: 'frontend' },
+    { label: t('projects.categories.fullstack'), value: 'fullstack' },
+    { label: t('projects.categories.dataScience'), value: 'dataScience' }
   ];
 
   const getLocalizedText = (textObj) => {
@@ -30,7 +30,7 @@ const Projects = () => {
         getLocalizedText(project.description).toLowerCase().includes(searchTerm.toLowerCase()) ||
         project.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
       
-      const matchesCategory = selectedCategory === 'All' || project.category === selectedCategory;
+      const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory;
       
       return matchesSearch && matchesCategory;
     });
@@ -38,32 +38,32 @@ const Projects = () => {
 
   const clearFilters = () => {
     setSearchTerm('');
-    setSelectedCategory('All');
+    setSelectedCategory('all');
   };
 
   const statistics = [
     {
       icon: Code,
       value: projects.length,
-      label: 'Total Projects',
+      label: t('projects.statistics.totalProjects'),
       color: 'text-blue-600 dark:text-blue-400'
     },
     {
       icon: Globe,
-      value: projects.filter(p => p.category === 'Frontend').length,
-      label: 'Frontend',
+      value: projects.filter(p => p.category === 'frontend').length,
+      label: t('projects.statistics.frontend'),
       color: 'text-green-600 dark:text-green-400'
     },
     {
       icon: Database,
-      value: projects.filter(p => p.category === 'Full-Stack').length,
-      label: 'Full-Stack',
+      value: projects.filter(p => p.category === 'fullstack').length,
+      label: t('projects.statistics.fullstack'),
       color: 'text-purple-600 dark:text-purple-400'
     },
     {
       icon: BarChart3,
-      value: projects.filter(p => p.category === 'Data Science').length,
-      label: 'Data Science',
+      value: projects.filter(p => p.category === 'dataScience').length,
+      label: t('projects.statistics.dataScience'),
       color: 'text-orange-600 dark:text-orange-400'
     }
   ];
@@ -115,7 +115,7 @@ const Projects = () => {
                   className="lg:hidden"
                   leftIcon={<Filter size={16} />}
                 >
-                  Filter
+                  {t('projects.filter')}
                 </Button>
 
                 {/* Category Filter (Desktop) */}
@@ -138,7 +138,7 @@ const Projects = () => {
                   className="lg:hidden mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 relative z-[9999]"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Filter by Category</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{t('projects.filterByCategory')}</h3>
                     <Button
                       variant="ghost"
                       size="icon"
@@ -199,14 +199,14 @@ const Projects = () => {
                     {t('projects.noProjects')}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Try adjusting your search or filter criteria to find what you're looking for
+                    {t('projects.noProjectsDescription')}
                   </p>
                 </div>
                 <Button
                   variant="default"
                   onClick={clearFilters}
                 >
-                  Clear Filters
+                  {t('projects.clearFilters')}
                 </Button>
               </CardContent>
             </Card>

@@ -58,6 +58,22 @@
     "viewGitHub": "查看 GitHub",
     "technologies": "使用技术",
     "noProjects": "没有找到匹配的项目。",
+    "filter": "筛选",
+    "filterByCategory": "按类别筛选",
+    "clearFilters": "清除筛选",
+    "noProjectsDescription": "尝试调整您的搜索或筛选条件以找到您要找的内容",
+    "categories": {
+      "all": "全部",
+      "frontend": "前端",
+      "fullstack": "全栈",
+      "dataScience": "数据科学"
+    },
+    "statistics": {
+      "totalProjects": "项目总数",
+      "frontend": "前端项目",
+      "fullstack": "全栈项目",
+      "dataScience": "数据科学项目"
+    },
     "detail": {
       "title": "项目详情",
       "overview": "项目概述",
