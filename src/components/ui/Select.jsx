@@ -18,7 +18,7 @@ const Select = ({
 
   return (
     <Listbox value={value} onChange={onChange} disabled={disabled}>
-      <div className={`relative ${className}`}>
+      <div className={`relative inline-block ${className}`}>
         <Listbox.Button
           className={`${buttonClassName} w-full cursor-pointer rounded-lg border py-3 pl-3 pr-10 text-left transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
             error 
@@ -30,7 +30,7 @@ const Select = ({
               : 'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700'
           }`}
         >
-          <span className="block truncate text-gray-900 dark:text-gray-100">
+          <span className="block text-gray-900 dark:text-gray-100">
             {selectedOption ? selectedOption.label : placeholder}
           </span>
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -46,7 +46,7 @@ const Select = ({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Listbox.Options className={`${optionsClassName} absolute z-[9999] mt-1 max-h-60 w-full overflow-auto rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}>
+          <Listbox.Options className={`${optionsClassName} absolute z-[9999] mt-1 max-h-60 min-w-max overflow-auto rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}>
             {options.map((option) => (
               <Listbox.Option
                 key={option.value}

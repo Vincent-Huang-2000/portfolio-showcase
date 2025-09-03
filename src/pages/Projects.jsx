@@ -124,7 +124,7 @@ const Projects = () => {
                     value={selectedCategory}
                     onChange={setSelectedCategory}
                     options={categories}
-                    className="w-40"
+                    className="min-w-[10rem]"
                   />
                 </div>
               </div>
