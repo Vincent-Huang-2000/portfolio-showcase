@@ -58,22 +58,22 @@ const About = () => {
   ];
 
   const socialLinks = [
-    {
+    personalInfo.social.github && {
       icon: Github,
       url: personalInfo.social.github.url,
       label: 'GitHub'
     },
-    {
+    personalInfo.social.linkedin && {
       icon: Linkedin,
       url: personalInfo.social.linkedin.url,
       label: 'LinkedIn'
     },
-    {
+    personalInfo.social.twitter && {
       icon: Twitter,
       url: personalInfo.social.twitter.url,
       label: 'Twitter'
     }
-  ];
+  ].filter(Boolean);
 
   // 获取技能等级配置（从 skillLevels 导入）
   const getSkillLevel = (level) => {
