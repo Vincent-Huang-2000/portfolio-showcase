@@ -57,22 +57,7 @@ export const usePersonalInfo = () => {
     })),
     
     // 简历信息
-    resume: personalInfo.resume,
-    
-    // 工作时间
-    workingHours: personalInfo.workingHours,
-    
-    // 可用性状态
-    availability: {
-      status: personalInfo.availability.status,
-      message: getLocalizedText(personalInfo.availability.message)
-    },
-    
-    // 响应时间
-    response: {
-      time: personalInfo.response.time,
-      message: getLocalizedText(personalInfo.response.message)
-    }
+    resume: personalInfo.resume
   };
 
   return {

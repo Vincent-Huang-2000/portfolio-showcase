@@ -11,7 +11,6 @@
     },
     "contact": {
       "email": "john.doe@example.com",
-      "phone": "+1 (555) 123-4567",
       "location": "San Francisco, CA",
       "experience": "3+ Years"
     },
@@ -98,27 +97,5 @@
     "size": "2.1 MB",
     "pages": 2,
     "lastUpdated": "Jan 2024"
-  },
-  "workingHours": {
-    "monday": "9:00 AM - 6:00 PM",
-    "tuesday": "9:00 AM - 6:00 PM",
-    "wednesday": "9:00 AM - 6:00 PM",
-    "thursday": "9:00 AM - 6:00 PM",
-    "friday": "9:00 AM - 6:00 PM",
-    "weekend": "flexible"
-  },
-  "availability": {
-    "status": "available",
-    "message": {
-      "en": "Currently available for new projects",
-      "zh": "目前可接受新项目合作"
-    }
-  },
-  "response": {
-    "time": "24 hours",
-    "message": {
-      "en": "I usually respond within 24 hours",
-      "zh": "我通常会在24小时内回复"
-    }
   }
 } 
