@@ -23,7 +23,6 @@ const Navbar = () => {
     { name: 'nav.home', href: '/', icon: Home },
     { name: 'nav.about', href: '/about', icon: User },
     { name: 'nav.projects', href: '/projects', icon: Code },
-    { name: 'nav.contact', href: '/contact', icon: Mail },
   ];
 
   const languageOptions = [

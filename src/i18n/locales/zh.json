@@ -3,7 +3,6 @@
     "home": "首页",
     "about": "关于我",
     "projects": "项目展示",
-    "contact": "联系方式",
     "resume": "简历"
   },
   "home": {
@@ -129,60 +128,6 @@
       "description": "如对我的经历有疑问或希望交流合作，欢迎随时联系我。",
       "getInTouch": "联系我",
       "emailDirectly": "直接邮件"
-    }
-  },
-  "contact": {
-    "title": "联系我",
-    "subtitle": "很高兴听到您的声音！欢迎联系我进行合作或者只是打个招呼。",
-    "email": "邮箱",
-    "phone": "电话",
-    "location": "位置",
-    "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "name": "姓名",
-    "message": "消息",
-    "send": "发送消息",
-    "messagePlaceholder": "请输入您的消息...",
-    "about": {
-      "title": "关于我",
-      "description": "我是一名充满热情的全栈开发者，专注于现代Web技术和用户体验。我热爱创造创新的解决方案，通过代码将想法变为现实。拥有多年开发经验，擅长前端和后端技术，能够独立完成项目从设计到部署的全过程。"
-    },
-    "services": {
-      "webDevelopment": "网站开发",
-      "webDevelopmentDescription": "使用现代框架和响应式设计定制网站",
-      "mobileApp": "移动应用",
-      "mobileAppDescription": "使用React Native开发跨平台移动应用",
-      "consulting": "技术咨询",
-      "consultingDescription": "为您的项目提供技术指导和架构设计",
-      "maintenance": "维护支持",
-      "maintenanceDescription": "为现有应用提供持续支持和更新"
-    },
-    "skills": {
-      "title": "技能概览"
-    },
-    "workingHours": {
-      "title": "工作时间",
-      "monday": "周一",
-      "tuesday": "周二",
-      "wednesday": "周三",
-      "thursday": "周四",
-      "friday": "周五",
-      "weekend": "周末",
-      "flexible": "灵活安排"
-    },
-    "info": {
-      "title": "联系信息"
-    },
-    "social": {
-      "title": "关注我"
-    },
-    "response": {
-      "title": "快速响应",
-      "description": "我通常会在24小时内回复您的消息。"
-    },
-    "availability": {
-      "title": "当前状态",
-      "description": "目前可接受新项目合作，欢迎咨询！"
     }
   },
   "common": {
