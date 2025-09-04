@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, Button } from '../components/ui';
+import { usePersonalInfo } from '../hooks/usePersonalInfo';
 import { 
   Code, 
   Palette, 
@@ -16,6 +17,7 @@ import {
 
 const Home = () => {
   const { t, i18n } = useTranslation();
+  const { personalInfo } = usePersonalInfo();
 
   const getLocalizedText = (key) => {
     const text = t(key);
@@ -23,7 +25,6 @@ const Home = () => {
       // 如果翻译不存在，返回默认英文
       const defaultTexts = {
         'home.welcome': 'Welcome to My Portfolio',
-        'home.introduction': 'I am a passionate Full Stack Developer with expertise in creating modern web applications. I love turning ideas into reality through clean, efficient code.',
         'home.skills.fullstack': 'Full Stack Development',
         'home.skills.fullstack.desc': 'End-to-end web development with modern technologies',
         'home.skills.design': 'UI/UX Design',
@@ -86,7 +87,7 @@ const Home = () => {
                 {getLocalizedText('home.welcome')}
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                {getLocalizedText('home.introduction')}
+                {personalInfo.description}
               </p>
             </motion.div>
 

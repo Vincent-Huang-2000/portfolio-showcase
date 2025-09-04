@@ -8,8 +8,6 @@
   "home": {
     "welcome": "欢迎来到我的作品集",
     "subtitle": "全栈开发者 | 专注用户体验与技术实现",
-    "description": "热衷于创造创新解决方案，通过代码将想法变为现实。",
-    "introduction": "我是一名充满热情的全栈开发者，擅长创建现代Web应用程序。我喜欢通过干净、高效的代码将想法变为现实。",
     "skills": {
       "fullstack": "全栈开发",
       "fullstack.desc": "使用现代技术进行端到端Web开发",
@@ -30,7 +28,6 @@
   },
   "about": {
     "title": "关于我",
-    "description": "我是一名充满热情的全栈开发者，擅长现代Web技术。我喜欢创建用户友好的应用程序来解决现实问题。",
     "skills": "技能",
     "experience": "经验",
     "education": "教育背景",

@@ -131,7 +131,7 @@ const About = () => {
             {t('about.title')}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
-            {t('about.description')}
+            {personalInfo.description}
           </p>
         </motion.div>
 

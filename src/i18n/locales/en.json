@@ -8,8 +8,6 @@
   "home": {
     "welcome": "Welcome to My Portfolio",
     "subtitle": "Full-Stack Developer | Focus on User Experience & Technical Implementation",
-    "description": "Passionate about creating innovative solutions and bringing ideas to life through code.",
-    "introduction": "I am a passionate Full Stack Developer with expertise in creating modern web applications. I love turning ideas into reality through clean, efficient code.",
     "skills": {
       "fullstack": "Full Stack Development",
       "fullstack.desc": "End-to-end web development with modern technologies",
@@ -30,7 +28,6 @@
   },
   "about": {
     "title": "About Me",
-    "description": "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating user-friendly applications that solve real-world problems.",
     "skills": "Skills",
     "experience": "Experience",
     "education": "Education",
