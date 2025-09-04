@@ -145,15 +145,17 @@
     "messagePlaceholder": "Your message here...",
     "about": {
       "title": "About Me",
-      "description": "I'm a passionate full-stack developer focused on modern web technologies and user experience. I love creating innovative solutions and bringing ideas to life through code. With years of development experience, I excel in both frontend and backend technologies, capable of handling projects from design to deployment independently.",
-      "coffeeLovers": "Coffee Lover",
-      "rating": "5 Star Rating"
+      "description": "I'm a passionate full-stack developer focused on modern web technologies and user experience. I love creating innovative solutions and bringing ideas to life through code. With years of development experience, I excel in both frontend and backend technologies, capable of handling projects from design to deployment independently."
     },
     "services": {
       "webDevelopment": "Web Development",
+      "webDevelopmentDescription": "Custom websites with modern frameworks and responsive design",
       "mobileApp": "Mobile Apps",
+      "mobileAppDescription": "Cross-platform mobile applications with React Native",
       "consulting": "Consulting",
-      "maintenance": "Maintenance"
+      "consultingDescription": "Technical guidance and architecture design for your projects",
+      "maintenance": "Maintenance",
+      "maintenanceDescription": "Ongoing support and updates for existing applications"
     },
     "skills": {
       "title": "Skills Overview"

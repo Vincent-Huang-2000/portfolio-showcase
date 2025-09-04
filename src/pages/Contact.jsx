@@ -71,10 +71,10 @@ const Contact = () => {
   ];
 
   const services = [
-    { name: t('contact.services.webDevelopment'), icon: Code },
-    { name: t('contact.services.mobileApp'), icon: MessageCircle },
-    { name: t('contact.services.consulting'), icon: User },
-    { name: t('contact.services.maintenance'), icon: CheckCircle2 }
+    { name: t('contact.services.webDevelopment'), icon: Code, description: t('contact.services.webDevelopmentDescription') },
+    { name: t('contact.services.mobileApp'), icon: MessageCircle, description: t('contact.services.mobileAppDescription') },
+    { name: t('contact.services.consulting'), icon: User, description: t('contact.services.consultingDescription') },
+    { name: t('contact.services.maintenance'), icon: CheckCircle2, description: t('contact.services.maintenanceDescription') }
   ];
 
   return (
@@ -112,20 +112,6 @@ const Contact = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                     {t('contact.about.description')}
                   </p>
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2">
-                      <Coffee className="text-blue-600 dark:text-blue-400" size={20} />
-                      <span className="text-gray-700 dark:text-gray-300">
-                        {t('contact.about.coffeeLovers')}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Star className="text-yellow-500" size={20} />
-                      <span className="text-gray-700 dark:text-gray-300">
-                        {t('contact.about.rating')}
-                      </span>
-                    </div>
-                  </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   {services.map((service, index) => {
@@ -133,8 +119,11 @@ const Contact = () => {
                     return (
                       <div key={index} className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center">
                         <Icon size={32} className="text-blue-600 dark:text-blue-400 mx-auto mb-2" />
-                        <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-1">
                           {service.name}
+                        </h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                          {service.description}
                         </p>
                       </div>
                     );

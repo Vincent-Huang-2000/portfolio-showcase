@@ -145,15 +145,17 @@
     "messagePlaceholder": "请输入您的消息...",
     "about": {
       "title": "关于我",
-      "description": "我是一名充满热情的全栈开发者，专注于现代Web技术和用户体验。我热爱创造创新的解决方案，通过代码将想法变为现实。拥有多年开发经验，擅长前端和后端技术，能够独立完成项目从设计到部署的全过程。",
-      "coffeeLovers": "咖啡爱好者",
-      "rating": "5星评价"
+      "description": "我是一名充满热情的全栈开发者，专注于现代Web技术和用户体验。我热爱创造创新的解决方案，通过代码将想法变为现实。拥有多年开发经验，擅长前端和后端技术，能够独立完成项目从设计到部署的全过程。"
     },
     "services": {
       "webDevelopment": "网站开发",
+      "webDevelopmentDescription": "使用现代框架和响应式设计定制网站",
       "mobileApp": "移动应用",
+      "mobileAppDescription": "使用React Native开发跨平台移动应用",
       "consulting": "技术咨询",
-      "maintenance": "维护支持"
+      "consultingDescription": "为您的项目提供技术指导和架构设计",
+      "maintenance": "维护支持",
+      "maintenanceDescription": "为现有应用提供持续支持和更新"
     },
     "skills": {
       "title": "技能概览"
