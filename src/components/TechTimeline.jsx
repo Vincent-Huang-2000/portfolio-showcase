@@ -10,6 +10,8 @@ import {
   Server, Database, FileType, Container, Cloud, Flame, Share2, 
   ArrowRight, FileCode, Figma, Brain
 } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 /**
  * 技术栈时间轴组件
@@ -218,7 +220,7 @@ const TechTimeline = ({
                     
                     {/* 描述 */}
                     <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                      {getLocalizedText(techTimelineData[currentTimelineIndex].description)}
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>{getLocalizedText(techTimelineData[currentTimelineIndex].description)}</ReactMarkdown>
                     </p>
                     
                     {/* 技术标签 */}
