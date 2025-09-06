@@ -7,6 +7,7 @@ import { projects } from '../data/projects';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Card, CardContent, Button } from '../components/ui';
+import ImageViewer from '../components/ImageViewer';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -14,6 +15,7 @@ const ProjectDetail = () => {
   const { t, i18n } = useTranslation();
   const [imageError, setImageError] = useState(false);
   const [markdownContent, setMarkdownContent] = useState(null);
+  const [imageViewer, setImageViewer] = useState({ isOpen: false, src: '', alt: '' });
 
   const project = projects.find(p => p.id === parseInt(id));
 
@@ -27,6 +29,14 @@ const ProjectDetail = () => {
 
   const handleImageError = () => {
     setImageError(true);
+  };
+
+  const handleImageClick = (src, alt) => {
+    setImageViewer({ isOpen: true, src, alt });
+  };
+
+  const closeImageViewer = () => {
+    setImageViewer({ isOpen: false, src: '', alt: '' });
   };
 
   const createSVGPlaceholder = (title, width = 800, height = 500) => {
@@ -83,6 +93,20 @@ const ProjectDetail = () => {
 
     loadMarkdown();
   }, [project, i18n.language]);
+
+  // 键盘事件监听器
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape' && imageViewer.isOpen) {
+        closeImageViewer();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [imageViewer.isOpen]);
 
   if (!project) {
     return (
@@ -246,7 +270,22 @@ const ProjectDetail = () => {
                       {t('projects.detail.projectDetails')}
                     </h2>
                     <div className="prose dark:prose-invert max-w-none prose-img:rounded-lg prose-img:shadow-md prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-600 dark:prose-p:text-gray-300">
-                      <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownContent}</ReactMarkdown>
+                      <ReactMarkdown 
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                          img: ({ src, alt, ...props }) => (
+                            <img
+                              {...props}
+                              src={src}
+                              alt={alt}
+                              className="cursor-pointer hover:opacity-90 transition-opacity rounded-lg shadow-md"
+                              onClick={() => handleImageClick(src, alt)}
+                            />
+                          )
+                        }}
+                      >
+                        {markdownContent}
+                      </ReactMarkdown>
                     </div>
                   </CardContent>
                 </Card>
@@ -360,6 +399,14 @@ const ProjectDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* 图片查看器 */}
+      <ImageViewer
+        isOpen={imageViewer.isOpen}
+        onClose={closeImageViewer}
+        imageSrc={imageViewer.src}
+        imageAlt={imageViewer.alt}
+      />
     </div>
   );
 };
