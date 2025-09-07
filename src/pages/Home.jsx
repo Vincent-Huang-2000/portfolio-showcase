@@ -97,7 +97,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
             >
-              <Link to="/contact">
+              <Link to="/about">
                 <Button
                   variant="default"
                   size="lg"
@@ -209,7 +209,7 @@ const Home = () => {
                   {getLocalizedText('home.cta.subtitle')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/contact">
+                  <Link to="/about">
                     <Button
                       variant="default"
                       size="lg"
