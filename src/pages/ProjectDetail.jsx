@@ -244,7 +244,7 @@ const ProjectDetail = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <Card variant="glass" shadow="lg">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
                     <Eye size={24} className="text-blue-600 dark:text-blue-400" />
                     {t('projects.detail.overview')}
@@ -264,12 +264,12 @@ const ProjectDetail = () => {
                 transition={{ duration: 0.6, delay: 0.35 }}
               >
                 <Card variant="glass" shadow="lg">
-                  <CardContent className="p-8">
+                  <CardContent className="p-4 sm:p-6 md:p-8">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
                       <Calendar size={24} className="text-green-600 dark:text-green-400" />
                       {t('projects.detail.projectDetails')}
                     </h2>
-                    <div className="prose dark:prose-invert max-w-none prose-img:rounded-lg prose-img:shadow-md prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-600 dark:prose-p:text-gray-300">
+                    <div className="prose dark:prose-invert max-w-none prose-img:rounded-lg prose-img:shadow-md prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-600 dark:prose-p:text-gray-300 prose-p:my-4 prose-headings:mt-6 prose-headings:mb-4 prose-ul:my-4 prose-ol:my-4 prose-li:my-1">
                       <ReactMarkdown 
                         remarkPlugins={[remarkGfm]}
                         components={{
@@ -299,7 +299,7 @@ const ProjectDetail = () => {
               transition={{ duration: 0.6, delay: markdownContent ? 0.45 : 0.4 }}
             >
               <Card variant="glass" shadow="lg">
-                <CardContent className="p-8">
+                <CardContent className="p-4 sm:p-6 md:p-8">
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
                     <Code size={24} className="text-purple-600 dark:text-purple-400" />
                     {t('projects.detail.technologies')}
