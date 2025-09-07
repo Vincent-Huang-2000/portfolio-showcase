@@ -118,8 +118,8 @@ const About = () => {
   };
 
   return (
-    <div className="min-h-screen bg-blue-50 dark:bg-gray-900 pt-24">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-blue-50 dark:bg-gray-900 pt-24 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -165,19 +165,19 @@ const About = () => {
                   {personalInfoItems.map((info, index) => {
                     const Icon = info.icon;
                     return (
-                      <div key={index} className="flex items-center justify-between py-3 border-b border-gray-100 dark:border-gray-700 last:border-b-0">
-                        <div className="flex items-center space-x-3">
-                          <Icon size={18} className="text-gray-500 dark:text-gray-400" />
-                          <span className="text-gray-600 dark:text-gray-400 font-medium">{info.label}</span>
+                      <div key={index} className="flex items-center justify-between py-3 border-b border-gray-100 dark:border-gray-700 last:border-b-0 min-w-0">
+                        <div className="flex items-center space-x-3 min-w-0 flex-shrink">
+                          <Icon size={18} className="text-gray-500 dark:text-gray-400 flex-shrink-0" />
+                          <span className="text-gray-600 dark:text-gray-400 font-medium text-sm sm:text-base truncate">{info.label}</span>
                         </div>
-                        <span className="text-gray-900 dark:text-white font-semibold">{info.value}</span>
+                        <span className="text-gray-900 dark:text-white font-semibold text-sm sm:text-base ml-2 flex-shrink-0">{info.value}</span>
                       </div>
                     );
                   })}
                 </div>
 
                 {/* 社交媒体链接 */}
-                <div className="flex justify-center space-x-6 mb-8">
+                <div className="flex justify-center space-x-4 sm:space-x-6 mb-8 flex-wrap">
                   {socialLinks.map((social, index) => {
                     const Icon = social.icon;
                     return (
@@ -226,12 +226,12 @@ const About = () => {
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-2 font-medium">
                     {i18n.language === 'zh' ? '熟练度等级：' : 'Skill Level:'}
                   </p>
-                  <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs">
+                  <div className="flex flex-wrap gap-x-3 sm:gap-x-4 gap-y-2 text-xs">
                     {Object.entries(skillLevels).map(([level, config]) => {
                       const simplifiedColor = getSimplifiedColor(config.stars);
                       return (
-                        <div key={level} className="flex items-center gap-1">
-                          <div className="flex items-center">
+                        <div key={level} className="flex items-center gap-1 min-w-0">
+                          <div className="flex items-center flex-shrink-0">
                             {Array.from({ length: config.stars }, (_, i) => (
                               <Star key={i} size={12} className={`${simplifiedColor} fill-current`} />
                             ))}
@@ -239,7 +239,7 @@ const About = () => {
                               <Star key={i + config.stars} size={12} className="text-gray-300 dark:text-gray-600" />
                             ))}
                           </div>
-                          <span className={`${simplifiedColor} font-medium`}>
+                          <span className={`${simplifiedColor} font-medium truncate`}>
                             {getLocalizedText(config.text)}
                           </span>
                         </div>
@@ -263,16 +263,16 @@ const About = () => {
                           const skillLevel = getSkillLevel(skill.level);
                           const simplifiedColor = getSimplifiedColor(skillLevel.stars);
                           return (
-                            <div key={skillIndex} className="flex items-center justify-between py-2">
-                              <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
-                              <div className="flex items-center space-x-3">
+                            <div key={skillIndex} className="flex items-center justify-between py-2 min-w-0">
+                              <span className="text-gray-700 dark:text-gray-300 font-medium text-sm sm:text-base flex-shrink min-w-0 truncate mr-2">{skill.name}</span>
+                              <div className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
                                 <div 
                                   className="flex items-center space-x-1"
                                   title={getLocalizedText(skillLevel.description)} // 工具提示显示详细描述
                                 >
                                   {renderStars(skill.level)}
                                 </div>
-                                <span className={`text-sm font-medium ${simplifiedColor}`}>
+                                <span className={`text-xs sm:text-sm font-medium ${simplifiedColor} hidden sm:inline`}>
                                   {getLocalizedText(skillLevel.text)}
                                 </span>
                               </div>
