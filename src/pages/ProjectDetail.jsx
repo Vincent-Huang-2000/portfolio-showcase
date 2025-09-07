@@ -51,7 +51,7 @@ const ProjectDetail = () => {
     return `data:image/svg+xml;base64,${btoa(svg)}`;
   };
 
-  // 加载可选 Markdown：/public/projects/{id}.{lang}.md -> /public/projects/{id}.en.md -> /public/projects/{id}.md
+  // 加载可选 Markdown：/public/projects/{id}.{lang}.md -> /public/projects/{id}.en.md
   useEffect(() => {
     if (!project) return;
 
@@ -59,8 +59,7 @@ const ProjectDetail = () => {
       const currentLang = (i18n.language || 'en').split('-')[0];
       const candidates = [
         `/projects/${project.id}.${currentLang}.md`,
-        `/projects/${project.id}.en.md`,
-        `/projects/${project.id}.md`
+        `/projects/${project.id}.en.md`
       ];
 
       for (const url of candidates) {
