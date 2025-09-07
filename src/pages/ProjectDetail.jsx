@@ -269,7 +269,7 @@ const ProjectDetail = () => {
                       <Calendar size={24} className="text-green-600 dark:text-green-400" />
                       {t('projects.detail.projectDetails')}
                     </h2>
-                    <div className="prose dark:prose-invert max-w-none prose-img:rounded-lg prose-img:shadow-md prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-600 dark:prose-p:text-gray-300 prose-p:my-4 prose-headings:mt-6 prose-headings:mb-4 prose-ul:my-4 prose-ol:my-4 prose-li:my-1">
+                    <div className="prose dark:prose-invert max-w-none prose-img:rounded-lg prose-img:shadow-md prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-600 dark:prose-p:text-gray-300 prose-p:my-4 prose-headings:mt-6 prose-headings:mb-4 prose-ul:my-4 prose-ol:my-4 prose-li:my-1 prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-gray-800 dark:prose-code:text-gray-200 prose-code:font-mono prose-code:text-sm prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:font-medium hover:prose-a:text-blue-700 dark:hover:prose-a:text-blue-300 prose-a:underline">
                       <ReactMarkdown 
                         remarkPlugins={[remarkGfm]}
                         components={{
