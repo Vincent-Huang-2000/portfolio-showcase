@@ -57,9 +57,10 @@ const ProjectDetail = () => {
 
     const loadMarkdown = async () => {
       const currentLang = (i18n.language || 'en').split('-')[0];
+      const baseUrl = import.meta.env.BASE_URL; // 动态获取部署路径
       const candidates = [
-        `/projects/${project.id}.${currentLang}.md`,
-        `/projects/${project.id}.en.md`
+        `${baseUrl}projects/${project.id}.${currentLang}.md`,
+        `${baseUrl}projects/${project.id}.en.md`
       ];
 
       for (const url of candidates) {
